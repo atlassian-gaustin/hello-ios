@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Darkly.h"
 
-NSString *MOBILE_KEY = @"mob-b9b5e098-aa3d-4049-b8fe-64abc39cd7d9";
+NSString *MOBILE_KEY = @"mob-4470d5b9-89ec-445c-b436-0d265f1eb2b6";
 NSString *BOOLEAN_FLAG_KEY = @"my-boolean";
 NSString *NUMBER_FLAG_KEY = @"my-number";
 NSString *STRING_FLAG_KEY = @"my-string";

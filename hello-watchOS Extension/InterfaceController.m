@@ -9,7 +9,7 @@
 #import "InterfaceController.h"
 #import "Darkly.h"
 
-NSString *MOBILE_KEY = @"mob-b9b5e098-aa3d-4049-b8fe-64abc39cd7d9";
+NSString *MOBILE_KEY = @"mob-4470d5b9-89ec-445c-b436-0d265f1eb2b6";
 NSString *FLAG_KEY = @"main-slider";
 
 @interface InterfaceController () <ClientDelegate>
@@ -39,17 +39,16 @@ NSString *FLAG_KEY = @"main-slider";
 
 - (void)setupLDClient {
     LDUserBuilder *builder = [[LDUserBuilder alloc] init];
-    builder = [builder withKey:@"bob@example.com"];
-    builder = [builder withFirstName:@"Bob"];
-    builder = [builder withLastName:@"Loblaw"];
+    builder.key = @"bob@example.com";
+    builder.firstName = @"Bob";
+    builder.lastName = @"Loblaw";
     
     NSArray *groups = @[@"beta_testers"];
-    builder = [builder withCustomArray:@"groups" value:groups];
+    [builder customArray:@"groups" value:groups];
     
-    LDConfigBuilder *config = [[LDConfigBuilder alloc] init];
-    [config withMobileKey:MOBILE_KEY];
+    LDConfig *config = [[LDConfig alloc] initWithMobileKey:MOBILE_KEY];
     
-    [[LDClient sharedInstance] start:config userBuilder:builder];
+    [[LDClient sharedInstance] start:config withUserBuilder:builder];
 }
 
 - (void)checkFeatureValue {

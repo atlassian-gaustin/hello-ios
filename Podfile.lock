@@ -6,12 +6,16 @@ PODS:
     - DarklyEventSource (~> 2.0.0)
 
 DEPENDENCIES:
-  - LaunchDarkly
+  - LaunchDarkly (from `../ios-client`)
+
+EXTERNAL SOURCES:
+  LaunchDarkly:
+    :path: ../ios-client
 
 SPEC CHECKSUMS:
   DarklyEventSource: 710930f8f17e75abaf4d6c38a31a71718cc151e5
-  LaunchDarkly: 353cda167f33ca38d8281068dbb0800d8f2bac95
+  LaunchDarkly: 8823a1c765fa84f6483770cf826caf58689e94d8
 
-PODFILE CHECKSUM: e35353ee50b31e82c8a2f042337cd7577463de3f
+PODFILE CHECKSUM: 9049b7bccf2ebd0ab4b14feb43c903ba622fcdf9
 
 COCOAPODS: 1.2.1
